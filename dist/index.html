@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="brill">
+    <head>
+        <meta charset="utf-8">
+        <title>Brill</title>
+
+        <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/core.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+
+        <!-- Core JS files -->
+        <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+        <script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+        <!-- /core JS files -->
+
+				<!-- Theme JS files -->
+				<script type="text/javascript" src="assets/js/core/app.js"></script>
+
+				<script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
+	<!-- /theme JS files -->
+    </head>
+    <body>
+			<div class="navbar navbar-inverse bg-indigo">
+					<div class="navbar-header">
+							<a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
+
+							<ul class="nav navbar-nav visible-xs-block">
+									<li>
+											<a data-toggle="collapse" data-target="#navbar-mobile">
+													<i class="icon-tree5"></i>
+											</a>
+									</li>
+									<li>
+											<a class="sidebar-mobile-main-toggle">
+													<i class="icon-paragraph-justify3"></i>
+											</a>
+									</li>
+							</ul>
+					</div>
+
+					<div class="navbar-collapse collapse" id="navbar-mobile">
+							<ul class="nav navbar-nav">
+									<li>
+											<a class="sidebar-control sidebar-main-toggle hidden-xs">
+													<i class="icon-paragraph-justify3"></i>
+											</a>
+									</li>
+							</ul>
+
+							<div class="navbar-right">
+									<p class="navbar-text">Morning, Victoria!</p>
+									<p class="navbar-text">
+											<span class="label bg-success-400">Online</span>
+									</p>
+							</div>
+					</div>
+			</div>
+				<!-- Page Container -->
+				<div class="page-container">
+					<!-- Page Content -->
+					<div class="page-content">
+
+						<ui-view></ui-view>
+
+					</div>
+				</div>
+
+				<!-- lib -->
+        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+				<script type="text/javascript" src="bower_components/angular/angular-ui-router.js"></script>
+
+				<!-- cdn -->
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.min.js"></script>
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+
+				<!-- app -->
+				<script type="text/javascript" src="app/main.js"></script>
+				<script type="text/javascript" src="app/main.route.js"></script>
+    </body>
+</html>
