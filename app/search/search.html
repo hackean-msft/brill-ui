@@ -16,14 +16,14 @@
 				<form action="#" class="main-search">
 					<div class="input-group content-group">
 						<div class="has-feedback has-feedback-left">
-							<input type="text" class="form-control input-xlg">
+							<input type="text" class="form-control input-xlg" ng-model="searchQuery">
 							<div class="form-control-feedback">
 								<i class="icon-search4 text-muted text-size-base"></i>
 							</div>
 						</div>
 
 						<div class="input-group-btn">
-							<button type="submit" class="btn btn-primary btn-xlg">Search</button>
+							<button type="submit" class="btn btn-primary btn-xlg" ng-click="search(searchQuery)">Search</button>
 						</div>
 					</div>
 				</form>

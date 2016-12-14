@@ -11,7 +11,7 @@
 											templateUrl:"app/search/search.html"
 							})
 							.state("search-results", {
-											url:"/search",
+											url:"/search?q",
 											templateUrl: "app/search/search-results.html"
 							})
 		}
