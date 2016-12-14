@@ -1,12 +1,14 @@
 (function() {
 		var app = angular.module("brill")
-		app.config(RouteConfig)
-		RouteConfig.$inject = ["$stateProvider", "$urlProvider"]
+		RouterConfig.$inject = ["$stateProvider", "$urlRouterProvider"]
+		app.config(RouterConfig)
 
-		function RouteConfig($stateProvider, $urlProvider){
+		function RouterConfig($stateProvider, $urlRouterProvider){
 			$stateProvider.state('search', {
-				"url":"/search"
-				"templateUrl":"app/search/search.html"
+				url:"/search",
+				templateUrl:"app/search/search.html"
 			})
+
+			$urlRouterProvider.when("/")
 		}
 }())
