@@ -4,11 +4,16 @@
 		app.config(RouterConfig)
 
 		function RouterConfig($stateProvider, $urlRouterProvider){
-			$stateProvider.state('search', {
-				url:"/search",
-				templateUrl:"app/search/search.html"
-			})
-
-			$urlRouterProvider.when("/")
+			$urlRouterProvider.otherwise("/")
+			$stateProvider
+							.state('search', {
+											url:"/",
+											templateUrl:"app/search/search.html"
+							})
+							.state("search-results", {
+											url:"/search",
+											templateUrl: "app/search/search-results.html"
+							})
 		}
+
 }())
