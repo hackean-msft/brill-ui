@@ -8,11 +8,11 @@
 			$stateProvider
 							.state('search', {
 											url:"/",
-											templateUrl:"app/search/search.html"
+											templateUrl:"app/search/views/search.html"
 							})
 							.state("search-results", {
 											url:"/search?q",
-											templateUrl: "app/search/search-results.html"
+											templateUrl: "app/search/views/search-results.html"
 							})
 		}
 
