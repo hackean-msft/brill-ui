@@ -1,7 +1,7 @@
 var gulp = require("gulp")
 var browserSync = require("browser-sync").create()
 
-gulp.task("serve", ["copy-html", "copy-assets", "copy-app", "copy-css", "copy-bower"], function() {
+gulp.task("serve", ["copy-html", "copy-assets", "copy-app", "copy-css", "copy-bower", "copy-mock-images"], function() {
 	browserSync.init({
 		server: "./dist"
 	});
@@ -36,4 +36,9 @@ gulp.task("copy-css", function(){
 gulp.task("copy-bower", function() {
 	gulp.src("./bower_components/**")
 		.pipe(gulp.dest("./dist/bower_components"))
+})
+
+gulp.task("copy-mock-images", function() {
+	gulp.src("./images/**")
+		.pipe(gulp.dest("./dist/images"))
 })

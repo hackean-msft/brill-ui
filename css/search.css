@@ -7,3 +7,15 @@
 	width:90%;
 	margin:10px auto;
 }
+
+span.result-document-title {
+	color:#1E88E5;
+}
+
+li.search-document {
+	cursor: pointer;
+}
+
+li.search-document:hover {
+	font-weight:bold;
+}
