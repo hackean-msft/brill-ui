@@ -1,0 +1,113 @@
+<div class="document-manager" ng-controller="DocumentManagerController" ng-init="init()">
+	<div class="page-header page-header-default">
+		<div class="page-header-content">
+			<div class="page-title">
+				<h4>Collections</h4>
+			</div>
+
+			<div class="heading-elements">
+				<div class="heading-btn-group">
+					<a ui-sref="search" class="btn btn-link btn-float text-size-small has-text"><i class="icon-search4 text-primary"></i> <span>Search</span></a>
+					<a data-toggle="modal" data-target="#modal_theme_primary" class="btn btn-link btn-float text-size-small has-text"><i class="icon-database-add text-primary"></i> <span>Add</span></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="breadcrumb-line">
+			<ul class="breadcrumb">
+				<li><a href="index.html"><i class="icon-home2 position-left"></i> Home</a></li>
+				<li><a href="gallery_library.html">Documents</a></li>
+			</ul>
+		</div>
+
+	</div>
+	<div>
+		<div class="panel panel-white">
+			<div class="panel-heading">
+				<h6 class="panel-title text-semibold">Uploaded Documents</h6>
+				<div class="heading-elements">
+					<ul class="icons-list">
+        		<li><a data-action="collapse"></a></li>
+        		<li><a data-action="reload"></a></li>
+        		<li><a data-action="close"></a></li>
+          </ul>
+        </div>
+			</div>
+
+			<table class="table table-striped media-library table-lg">
+        <thead>
+            <tr>
+              <th>Preview</th>
+              <th>Title</th>
+              <th>Document ID</th>
+              <th>Date</th>
+              <th>File info</th>
+              <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+				<tbody>
+					<tr>
+            <td>
+              <a href="assets/images/placeholder.jpg" data-popup="lightbox">
+                <img src="assets/images/placeholder.jpg" alt="" class="img-rounded img-preview">
+              </a>
+            </td>
+            <td><a href="#">Ignorant saw her drawings</a></td>
+            <td><a href="#">Eugene Kopyov</a></td>
+            <td>Jun 10, 2015</td>
+            <td>
+            	<ul class="list-condensed list-unstyled no-margin">
+              	<li><span class="text-semibold">Size:</span> 215 Kb</li>
+              	<li><span class="text-semibold">Format:</span> .jpg</li>
+            	</ul>
+            </td>
+		        <td class="text-center">
+		          <ul class="icons-list">
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown">
+										<i class="icon-menu9"></i>
+									</a>
+
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a href="#"><i class="icon-view"></i> Edit file</a></li>
+										<li><a href="#"><i class="icon-copy"></i> Copy file</a></li>
+										<li><a href="#"><i class="icon-eye-blocked"></i> Unpublish</a></li>
+										<li class="divider"></li>
+										<li><a href="#"><i class="icon-bin"></i> Move to trash</a></li>
+									</ul>
+								</li>
+							</ul>
+		      	</td>
+	        </tr>
+				</tbody>
+
+		</div>
+	</div>
+</div>
+
+<div id="modal_theme_primary" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header bg-primary">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+				<h6 class="modal-title">Primary header</h6>
+			</div>
+
+			<div class="modal-body">
+				<h6 class="text-semibold">Text in a modal</h6>
+				<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+				<hr>
+
+				<h6 class="text-semibold">Another paragraph</h6>
+				<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-link legitRipple" data-dismiss="modal">Close<span class="legitRipple-ripple" style="left: 62.714%; top: 73.6842%; transform: translate3d(-50%, -50%, 0px); width: 225.475%; opacity: 0;"></span></button>
+				<button type="button" class="btn btn-primary legitRipple">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>

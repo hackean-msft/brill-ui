@@ -14,6 +14,10 @@
 											url:"/search?q",
 											templateUrl: "app/search/views/search-results.html"
 							})
+							.state("document-manager", {
+											url:"/document-manager",
+											templateUrl: "app/document/views/document-manager.html"
+							})
 		}
 
 }())

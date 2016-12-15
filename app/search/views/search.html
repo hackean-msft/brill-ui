@@ -1,18 +1,12 @@
 <div ng-controller="SearchController">
 	<div class="search-box">
 		<!-- Search field -->
-		<div class="panel panel-flat">
-			<div class="panel-heading">
-				<h5 class="panel-title">Search Repository </h5>
-				<div class="heading-elements">
-					<ul class="icons-list">
-	            <li><a data-action="collapse"></a></li>
-	            <li><a data-action="close"></a></li>
-	        </ul>
-	        </div>
-				</div>
-
+		<div>
 			<div class="panel-body">
+				<h4 class="text-center content-group-lg">
+							Welcome to Brill
+							<small class="display-block">The Corporate knowledge base for the enterprise world!</small>
+				</h4>
 				<form class="main-search">
 					<div class="input-group content-group">
 						<div class="has-feedback has-feedback-left">
@@ -30,5 +24,11 @@
 			</div>
 		</div>
 		<!-- /search field -->
+
+		<!-- Directory -->
+		<h4 class="text-center content-group">
+			<small class="display-block"><a ui-sref="document-manager">Dashboard <i class="icon-arrow-right16"></i></a></small>
+		</h4>
+
 	</div>
 </div>
