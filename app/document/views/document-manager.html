@@ -41,26 +41,19 @@
               <th>Title</th>
               <th>Document ID</th>
               <th>Date</th>
-              <th>File info</th>
               <th class="text-center">Actions</th>
             </tr>
         </thead>
 				<tbody>
-					<tr>
+					<tr ng-repeat="document in documents">
             <td>
               <a href="assets/images/placeholder.jpg" data-popup="lightbox">
-                <img src="assets/images/placeholder.jpg" alt="" class="img-rounded img-preview">
+                <img ng-src="/images/{{ document.cover_img }}" alt="" class="img-rounded img-preview">
               </a>
             </td>
-            <td><a href="#">Ignorant saw her drawings</a></td>
-            <td><a href="#">Eugene Kopyov</a></td>
-            <td>Jun 10, 2015</td>
-            <td>
-            	<ul class="list-condensed list-unstyled no-margin">
-              	<li><span class="text-semibold">Size:</span> 215 Kb</li>
-              	<li><span class="text-semibold">Format:</span> .jpg</li>
-            	</ul>
-            </td>
+            <td><a href="#">{{document.title}}</a></td>
+            <td><a href="#">{{document.filename.substring(document.filename.lastIndexOf("\\") + 1)}}</a></td>
+            <td>{{document.uploaded | date:'yyyy-MM-dd' }}</td>
 		        <td class="text-center">
 		          <ul class="icons-list">
 								<li class="dropdown">
@@ -69,11 +62,9 @@
 									</a>
 
 									<ul class="dropdown-menu dropdown-menu-right">
-										<li><a href="#"><i class="icon-view"></i> Edit file</a></li>
-										<li><a href="#"><i class="icon-copy"></i> Copy file</a></li>
-										<li><a href="#"><i class="icon-eye-blocked"></i> Unpublish</a></li>
+										<li><a href="#"><i class="icon-file-eye2"></i> View</a></li>
 										<li class="divider"></li>
-										<li><a href="#"><i class="icon-bin"></i> Move to trash</a></li>
+										<li><a href="#"><i class="icon-bin"></i> Delete</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -90,24 +81,41 @@
 		<div class="modal-content">
 			<div class="modal-header bg-primary">
 				<button type="button" class="close" data-dismiss="modal">×</button>
-				<h6 class="modal-title">Primary header</h6>
+				<h6 class="modal-title">Add Document</h6>
 			</div>
+			<form id="file-upload-form">
+				<div class="modal-body">
+					<div class="form-group has-feedback has-feedback-left">
+						<input type="text" class="form-control input-xlg" placeholder="Document Title" ng-model="doc.title">
+						<div class="form-control-feedback">
+							<i class="icon-book3"></i>
+						</div>
+					</div>
+					<div class="form-group">
+						<i class=" icon-file-text"></i>
+						<div class="col-lg-10">
+							<textarea rows="5" cols="5" class="form-control" placeholder="Document Description" ng-model="doc.description"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-lg-2">Document </label>
+						<div class="col-lg-10">
+							<input type="file" id="document"class="file-styled">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-lg-2">Cover Image(Optional) </label>
+						<div class="col-lg-10">
+							<input type="file" id="coverImage" class="file-styled">
+						</div>
+					</div>
+				</div>
 
-			<div class="modal-body">
-				<h6 class="text-semibold">Text in a modal</h6>
-				<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-				<hr>
-
-				<h6 class="text-semibold">Another paragraph</h6>
-				<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-			</div>
-
-			<div class="modal-footer">
-				<button type="button" class="btn btn-link legitRipple" data-dismiss="modal">Close<span class="legitRipple-ripple" style="left: 62.714%; top: 73.6842%; transform: translate3d(-50%, -50%, 0px); width: 225.475%; opacity: 0;"></span></button>
-				<button type="button" class="btn btn-primary legitRipple">Save changes</button>
-			</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-link legitRipple" data-dismiss="modal">Close<span class="legitRipple-ripple" style="left: 62.714%; top: 73.6842%; transform: translate3d(-50%, -50%, 0px); width: 225.475%; opacity: 0;"></span></button>
+					<button type="button" class="btn btn-primary legitRipple" ng-click="upload()">Upload</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
